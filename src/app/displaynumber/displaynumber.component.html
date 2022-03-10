@@ -1,0 +1,12 @@
+<button class="btn btn-primary"
+    (click)="onDisplayDetails()">Display Details</button>
+<p *ngIf="displayDetails">Secret Password = tuna</p>
+
+<!-- <p *ngFor="let displayedNumber of incrementingNumber"
+    [ngStyle]="{backgroundColor: displayedNumber > 4 ? 'blue' : 'false'}"
+    [ngClass]="{'whiteNumber': displayedNumber >= 5}">{{displayedNumber}}</p> -->
+
+<!-- looping with index -->
+<p *ngFor="let displayedNumber of incrementingNumber; let i = index"
+    [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'false'}"
+    [ngClass]="{'whiteNumber': i >= 4}">{{displayedNumber}}</p>
